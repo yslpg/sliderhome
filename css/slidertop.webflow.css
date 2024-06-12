@@ -19,7 +19,7 @@ a {
 .container-large {
   width: 100%;
   max-width: 80rem;
-  min-height: 900px;
+  min-height: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,17 +35,24 @@ a {
   height: 100%;
 }
 
+.section-gallery {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gallery20_slide {
   padding-right: 2rem;
 }
 
 .gallery20_arrow {
-  border: 1px solid var(--black);
+  border: 1px none var(--black);
   border-radius: 100%;
   justify-content: center;
   align-items: center;
   width: 3rem;
   height: 3rem;
+  max-height: 3rem;
   margin-left: auto;
   margin-right: 2%;
   display: flex;
@@ -56,7 +63,9 @@ a {
 }
 
 .gallery20_arrow.is-left {
+  border-style: none;
   border-color: rgba(0, 0, 0, .81);
+  max-height: 3rem;
   right: 4rem;
 }
 
@@ -74,7 +83,7 @@ a {
 }
 
 .padding-large3rem {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -95,7 +104,7 @@ a {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -310,6 +319,12 @@ a {
   position: relative;
 }
 
+.mainmoviediv {
+  width: 100%;
+  margin-top: 53px;
+  margin-bottom: 53px;
+}
+
 .home-section2wrap {
   object-fit: cover;
   justify-content: center;
@@ -452,7 +467,11 @@ a {
 
 @media screen and (max-width: 991px) {
   .padding-large3rem {
-    padding-top: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .gallery20_slider-2 {
     padding-bottom: 6rem;
   }
 
@@ -550,8 +569,8 @@ a {
   }
 
   .padding-large3rem {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 
   .gallery20_slider-2 {
@@ -647,6 +666,11 @@ a {
 }
 
 @media screen and (max-width: 479px) {
+  .padding-large3rem {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lystra-h1-home {
     font-size: 2rem;
   }
