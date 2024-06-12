@@ -34,6 +34,8 @@
   align-items: center;
   width: 3rem;
   height: 3rem;
+  margin-left: auto;
+  margin-right: 2%;
   display: flex;
   top: auto;
   bottom: 0%;
@@ -79,7 +81,11 @@
   justify-content: center;
   align-items: center;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 5rem;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .lystra-button-main {
@@ -287,6 +293,98 @@
   position: relative;
 }
 
+.home-section2wrap {
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  min-height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 55%;
+  display: flex;
+  position: relative;
+}
+
+.homesection2-text {
+  z-index: 99;
+  color: #fff;
+  flex-flow: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Braunlinear, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.text-block {
+  text-align: center;
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3rem;
+  position: relative;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.whiteoutlinebuttonwrap {
+  background-color: rgba(0, 0, 0, .11);
+  margin-top: 24px;
+}
+
+.button-outline {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .03);
+  border: 1px solid #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.section2-imagewrap {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.image-4 {
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-bottom: 0 rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
 @media screen and (max-width: 991px) {
   .padding-large3rem {
     padding-top: 6rem;
@@ -353,6 +451,20 @@
     min-height: auto;
     max-height: 20vw;
   }
+
+  .home-section2wrap {
+    height: 400px;
+    min-height: auto;
+  }
+
+  .homesection2-text {
+    min-height: auto;
+  }
+
+  .image-4 {
+    height: auto;
+    min-height: auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -360,13 +472,27 @@
     padding-right: 1.5rem;
   }
 
+  .gallery20_arrow {
+    width: 2.2rem;
+    height: 2.2rem;
+    right: 1%;
+  }
+
   .gallery20_arrow.is-left {
+    width: 2.2rem;
+    height: 2.2rem;
     right: 3.5rem;
   }
 
   .padding-large3rem {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .gallery20_slider-2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2%;
   }
 
   .lystra-box2 {
@@ -438,6 +564,21 @@
     margin-right: auto;
     position: absolute;
   }
+
+  .home-section2wrap {
+    height: 300px;
+    min-height: auto;
+  }
+
+  .text-block {
+    max-width: 400px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .image-4 {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -491,40 +632,78 @@
     height: 100%;
     max-height: none;
   }
+
+  .home-section2wrap {
+    flex-flow: column;
+    height: auto;
+    padding-top: 0%;
+  }
+
+  .homesection2-text {
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .text-block {
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    display: flex;
+  }
+
+  .section2-imagewrap {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+  }
+
+  .image-4 {
+    height: 100%;
+    position: relative;
+  }
 }
 
 
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-bold.otf') format('opentype');
+  src: url('../fonts/braunlinear-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-light.otf') format('opentype');
+  src: url('../fonts/braunlinear-light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-medium.otf') format('opentype');
+  src: url('../fonts/braunlinear-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-regular.otf') format('opentype');
+  src: url('../fonts/braunlinear-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-thin.otf') format('opentype');
+  src: url('../fonts/braunlinear-thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
