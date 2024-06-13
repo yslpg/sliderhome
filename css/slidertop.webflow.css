@@ -704,7 +704,7 @@ a {
   text-align: center;
   cursor: pointer;
   background-color: #dee3ff;
-  background-image: url('../images/Group.svg');
+  background-image: url('https://sliderhome.netlify.app/images/Group.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 16px 14px;
@@ -769,7 +769,7 @@ a {
   text-align: center;
   cursor: pointer;
   background-color: #dee3ff;
-  background-image: url('../images/Group-1.svg');
+  background-image: url('https://sliderhome.netlify.app/images/Group-1.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 16px 14px;
