@@ -520,6 +520,7 @@ a {
   margin-right: auto;
   padding: 20px 9% 20px 5%;
   position: static;
+  max-width: 500px;
 }
 
 .swiper-slide {
