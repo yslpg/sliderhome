@@ -518,7 +518,7 @@ a {
   font-family: var(--linear);
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 9% 20px 20px;
+  padding: 20px 9% 20px 5%;
   position: static;
 }
 
@@ -625,7 +625,7 @@ a {
   white-space: normal;
   word-break: normal;
   max-width: 500px;
-  margin-top: 90px;
+  margin-top: 10px;
   font-family: Braunlinear, sans-serif;
   font-size: 2rem;
   font-weight: 100;
@@ -973,6 +973,10 @@ a {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .productheadline {
+    margin-top: 10px;
   }
 
   .container-2.grid {
