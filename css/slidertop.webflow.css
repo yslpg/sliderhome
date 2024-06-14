@@ -515,6 +515,7 @@ a {
 }
 
 .rightdiv {
+  font-family: var(--linear);
   margin-left: auto;
   margin-right: auto;
   padding: 20px 9% 20px 20px;
@@ -704,7 +705,7 @@ a {
   text-align: center;
   cursor: pointer;
   background-color: #dee3ff;
-  background-image: url('https://sliderhome.netlify.app/images/Group.svg');
+  background-image: url('../images/Group.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 16px 14px;
@@ -769,7 +770,7 @@ a {
   text-align: center;
   cursor: pointer;
   background-color: #dee3ff;
-  background-image: url('https://sliderhome.netlify.app/images/Group-1.svg');
+  background-image: url('../images/Group-1.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 16px 14px;
@@ -851,6 +852,22 @@ a {
   font-size: 3rem;
   font-weight: 100;
   line-height: 3.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.faqbox {
+  margin: 59px auto;
+}
+
+.uk-card-media-center.uk-cover-container {
+  position: relative;
+}
+
+.uk-cover {
+  object-fit: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -1393,35 +1410,35 @@ a {
 
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-bold.otf') format('opentype');
+  src: url('../fonts/braunlinear-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-light.otf') format('opentype');
+  src: url('../fonts/braunlinear-light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-medium.otf') format('opentype');
+  src: url('../fonts/braunlinear-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-regular.otf') format('opentype');
+  src: url('../fonts/braunlinear-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('https://sliderhome.netlify.app/fonts/braunlinear-thin.otf') format('opentype');
+  src: url('../fonts/braunlinear-thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
