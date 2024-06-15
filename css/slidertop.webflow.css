@@ -7,6 +7,13 @@
   --lystra-peach: #f6bbaf;
 }
 
+.mainwidth {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .w-layout-grid {
   grid-row-gap: 16px;
   grid-column-gap: 16px;
