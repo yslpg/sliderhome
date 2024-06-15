@@ -273,6 +273,46 @@ a {
   right: 0%;
 }
 
+
+
+.uk-button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 15px 43px;
+}
+
+.uk-button:hover {
+  background-color: var(--lystra-blue);
+}
+
+.uk-button-copy {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 15px 43px;
+}
+
+.uk-button-copy:hover {
+  background-color: var(--lystra-blue);
+}
+
+.uk-button-muted {
+  background-color: var(--lystra-peach);
+  color: var(--black);
+  padding: 15px 43px;
+}
+
+.uk-button-muted:hover {
+  background-color: var(--lystra-blue);
+  color: var(--white);
+}
+
+
+
+
+
+
+
+
 .lystra-buttonleft {
   font-family: var(--linear);
   border: 0 rgba(0, 0, 0, 0);
