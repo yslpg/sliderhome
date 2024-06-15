@@ -277,7 +277,7 @@ a {
 
 .uk-button {
   background-color: var(--black);
-  color: var(--white);
+  color: #ffffff !important;
   padding: 15px 43px;
 }
 
@@ -287,7 +287,7 @@ a {
 
 .uk-button-copy {
   background-color: var(--black);
-  color: var(--white);
+  color: #ffffff !important;
   padding: 15px 43px;
 }
 
@@ -303,7 +303,7 @@ a {
 
 .uk-button-muted:hover {
   background-color: var(--lystra-blue);
-  color: var(--white);
+  color: #ffffff !important;
 }
 
 
