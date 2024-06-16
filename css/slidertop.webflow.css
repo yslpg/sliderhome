@@ -3,8 +3,8 @@
   --lystra-blue: #2b00ff;
   --black: black;
   --white: white;
-  --lystra-plum: #6c12fe;
   --lystra-peach: #f6bbaf;
+  --lystra-plum: #6c12fe;
 }
 
 .w-layout-grid {
@@ -272,46 +272,6 @@ a {
   left: auto;
   right: 0%;
 }
-
-
-
-.uk-button {
-  background-color: var(--black);
-  color: #ffffff !important;
-  padding: 15px 43px;
-}
-
-.uk-button:hover {
-  background-color: var(--lystra-blue);
-}
-
-.uk-button-copy {
-  background-color: var(--black);
-  color: #ffffff !important;
-  padding: 15px 43px;
-}
-
-.uk-button-copy:hover {
-  background-color: var(--lystra-blue);
-}
-
-.uk-button-muted {
-  background-color: var(--lystra-peach);
-  color: var(--black);
-  padding: 15px 43px;
-}
-
-.uk-button-muted:hover {
-  background-color: var(--lystra-blue);
-  color: #ffffff !important;
-}
-
-
-
-
-
-
-
 
 .lystra-buttonleft {
   font-family: var(--linear);
@@ -665,7 +625,6 @@ a {
   font-size: 2rem;
   font-weight: 100;
   line-height: 105%;
-  margin-top:50px;
 }
 
 .grid-5 {
@@ -908,8 +867,10 @@ a {
 
 .heading-style-h1 {
   font-family: var(--linear);
-  font-size: 3.5rem;
-  font-weight: 300;
+  color: var(--lystra-blue);
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -1148,6 +1109,179 @@ a {
   text-align: center;
 }
 
+.uk-button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 15px 43px;
+}
+
+.uk-button:hover {
+  background-color: var(--lystra-blue);
+}
+
+.uk-button-copy {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 15px 43px;
+}
+
+.uk-button-copy:hover {
+  background-color: var(--lystra-blue);
+}
+
+.uk-button-muted {
+  background-color: var(--lystra-peach);
+  color: var(--black);
+  padding: 15px 43px;
+}
+
+.uk-button-muted:hover {
+  background-color: var(--lystra-blue);
+  color: var(--white);
+}
+
+.scrollglow {
+  color: var(--lystra-blue);
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.scrolltitlewrap {
+  object-fit: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+}
+
+.doublelines {
+  box-sizing: border-box;
+  clear: none;
+  object-position: 0% 50%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 9px 2svw 9px 2vw;
+  display: flex;
+  position: relative;
+}
+
+._3stepparagraph {
+  font-family: var(--linear);
+  color: var(--lystra-blue);
+  white-space: pre-wrap;
+  max-width: 270px;
+}
+
+.scrollwrap {
+  display: flex;
+}
+
+.uk-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stepright {
+  width: 14vw;
+  margin-left: 22px;
+  margin-right: 10px;
+}
+
+.circlepurple {
+  background-color: var(--lystra-blue);
+  border: 0 solid #000;
+  border-radius: 200px;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+}
+
+.numberwhite {
+  font-family: var(--linear);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.imagewrap-scroll {
+  max-width: 9vw;
+}
+
+.marquee-wrapper {
+  background-color: var(--white);
+  color: #dfdfdf;
+  width: auto;
+  max-width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.marquee-container {
+  grid-column-gap: 4.5vw;
+  grid-row-gap: 4.5vw;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.marquee-content-contaier {
+  grid-column-gap: 2.2vw;
+  grid-row-gap: 2.2vw;
+  flex-wrap: nowrap;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.marquee-text {
+  white-space: nowrap;
+  font-size: 3.5vw;
+  line-height: 1.5em;
+}
+
+.marquee-icon {
+  width: 2.5vw;
+}
+
+.marqueewrap {
+  padding-top: 0;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+}
+
+.marqueedouble {
+  width: 70vw;
+  min-width: 100%;
+}
+
+.grid-6 {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+  min-width: auto;
+}
+
+.glowthird {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .padding-large3rem {
     padding-top: 1rem;
@@ -1282,7 +1416,7 @@ a {
   }
 
   .heading-style-h1 {
-    font-size: 3.25rem;
+    font-size: 1.2rem;
   }
 
   .banner15_heading-wrapper {
@@ -1304,6 +1438,42 @@ a {
   .div-block {
     width: 256px;
     height: 256px;
+  }
+
+  ._3stepparagraph {
+    margin-top: 16px;
+  }
+
+  .stepright {
+    width: 22vw;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .circlepurple {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  .imagewrap-scroll {
+    width: 27vw;
+    max-width: 27vw;
+    height: 20vw;
+    max-height: 17vw;
+    overflow: hidden;
+  }
+
+  .glowthird {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+
+  .image-5, .image5 {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1485,7 +1655,7 @@ a {
   }
 
   .heading-style-h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .banner15_image-wrapper {
@@ -1501,6 +1671,29 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+
+  .stepright {
+    width: 42vw;
+    margin-right: 26px;
+  }
+
+  .circlepurple {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .imagewrap-scroll {
+    max-width: 22vw;
+  }
+
+  .grid-6 {
+    grid-template-columns: 1fr;
+  }
+
+  .glowthird {
+    flex-flow: row;
+    padding: 30px;
   }
 }
 
@@ -1618,6 +1811,27 @@ a {
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .stepright {
+    width: 90%;
+  }
+
+  .circlepurple {
+    width: 22vw;
+    height: 22vw;
+  }
+
+  .imagewrap-scroll {
+    width: 100%;
+    max-width: none;
+    height: 50vw;
+    max-height: 50vw;
+  }
+
+  .glowthird {
+    flex-flow: column;
+    width: auto;
+  }
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfdfe-d820a03d {
@@ -1692,6 +1906,11 @@ a {
   justify-self: start;
 }
 
+#w-node-_875c5cee-55fe-6667-1aeb-ecc27f959e5b-f16b93e6, #w-node-dbb30e03-9ed2-4727-0421-aaa3f5e43410-f16b93e6, #w-node-_7f94a512-2aa4-32d1-7a89-46912b26c729-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dee-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dfa-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4e08-f16b93e6 {
+  align-self: center;
+  justify-self: center;
+}
+
 #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d72-7db9ad0a {
   align-self: start;
   justify-self: center;
@@ -1717,6 +1936,36 @@ a {
   #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d72-7db9ad0a {
     align-self: center;
   }
+}
+
+
+add-to-cart-buttons
+
+https://lystra-beauty.mybigcommerce.com/?guestTkn=7eqc3l0znb
+
+
+  <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+                      data-cart-item-add>
+                    <input type="hidden" name="action" value="add">
+                    <input type="hidden" name="product_id" value="{{product.id}}"/>
+                    <div data-product-option-change style="display:none;">
+                        {{#each product.options}}
+                            {{{dynamicComponent 'components/products/options'}}}
+                        {{/each}}
+                    </div>
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Braunlinear';
+  src: url('../fonts/braunlinear-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 
