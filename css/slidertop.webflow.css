@@ -1329,7 +1329,9 @@ a {
 }
 
 .left-wrap {
-  flex: 1;
+  flex: 0 auto;
+  width: 100%;
+  max-width: 50%;
   position: relative;
 }
 
