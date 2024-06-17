@@ -1828,6 +1828,7 @@ a {
 
   .hero-felx {
     flex-flow: column;
+    height: auto;
     min-height: auto;
     padding-right: 1%;
     display: flex;
@@ -2316,6 +2317,8 @@ a {
     align-self: center;
   }
 }
+
+
 
 @font-face {
   font-family: 'Braunlinear';
