@@ -437,6 +437,7 @@ a {
   object-fit: cover;
   border: 0 rgba(0, 0, 0, 0);
   width: 100%;
+  max-width: 100%;
   height: 100%;
   min-height: auto;
   position: absolute;
@@ -1330,7 +1331,7 @@ a {
 
 .left-wrap {
   flex: 0 auto;
-  width: 100%;
+  width: 50%;
   max-width: none;
   margin-left: auto;
   margin-right: auto;
@@ -1360,6 +1361,11 @@ a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .eyebrow-home {
@@ -2353,38 +2359,40 @@ a {
 }
 
 
+
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-light.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-light.otf") format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-medium.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-bold.otf") format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Braunlinear';
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-thin.otf") format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Braunlinear';
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-medium.otf") format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-regular.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts//braunlinear-regular.otf") format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
+
