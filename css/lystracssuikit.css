@@ -959,6 +959,11 @@
   font-size: 1rem;
 }
 
+.uk-overlay:hover .uk-overlay-background {
+  background: rgba(43, 0, 255, 0.64);
+  transition: all ease 0.25s;  
+}
+
 .buttonoverlay {
   background-color: var(--purpletint);
   opacity: .38;
