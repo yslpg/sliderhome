@@ -1468,11 +1468,17 @@ a {
   width: 100%;
   height: auto;
   min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faqcenter {
+  object-fit: cover;
   width: 100%;
-  min-height: 500px;
+  min-width: auto;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
 
@@ -1480,9 +1486,9 @@ a {
   object-fit: cover;
   border: 0 rgba(0, 0, 0, 0);
   width: 100%;
-  min-width: 400px;
+  min-width: auto;
   height: 100%;
-  min-height: 500px;
+  min-height: 600px;
   position: absolute;
   top: 0%;
   bottom: 0%;
@@ -1492,6 +1498,14 @@ a {
 
 .code-embed {
   max-width: 500px;
+}
+
+.linkpointer {
+  text-align: left;
+}
+
+.linkpointer:hover {
+  color: var(--lystra-plum);
 }
 
 @media screen and (max-width: 991px) {
@@ -2321,38 +2335,39 @@ a {
 }
 
 
+
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-light.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-light.otf") format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-medium.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-bold.otf") format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Braunlinear';
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-thin.otf") format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Braunlinear';
+  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-medium.otf") format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-regular.otf') format('opentype');
+  src: url("https://lystrastyle.netlify.app/assets/fonts//braunlinear-regular.otf") format('opentype');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Braunlinear';
-  src: url('../fonts/braunlinear-thin.otf') format('opentype');
-  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
