@@ -1094,6 +1094,7 @@ a {
   color: var(--lystra-blue);
   margin-bottom: 0;
   font-size: 3rem;
+  line-height: 1.2;
   font-weight: 300;
 }
 
