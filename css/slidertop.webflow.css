@@ -3060,7 +3060,6 @@ a {
   }
 }
 
-
 @font-face {
   font-family: 'Braunlinear';
   src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-light.otf") format('opentype');
@@ -3096,4 +3095,5 @@ a {
   font-style: normal;
   font-display: swap;
 }
+
 
