@@ -1,5 +1,5 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Jun 26 2024 01:59:34 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6662b94da013698024d4da7f" data-wf-site="6662b94da013698024d4da79">
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Jul 16 2024 21:25:40 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6696b0c9f6efb643c2dee5db" data-wf-site="6662b94da013698024d4da79">
 <head>
   <meta charset="utf-8">
   <title>slidertop</title>
@@ -16,8 +16,131 @@
   <link rel="stylesheet" href="https://lystrastyle.netlify.app/assets/css/lystrauikit.css">
   <!--  UIkit JS  -->
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
-  <link href="https://unpkg.com/beerslider/dist/BeerSlider.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script><!-- <link href="https://unpkg.com/beerslider/dist/BeerSlider.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+.beer-slider {
+	display: inline-block;
+	overflow: hidden;
+	position: relative
+}
+.beer-slider *, .beer-slider:after, .beer-slider :after, .beer-slider:before, .beer-slider :before {
+	box-sizing: border-box
+}
+.beer-slider img, .beer-slider svg {
+	vertical-align: bottom
+}
+.beer-slider>* {
+	height: 100%
+}
+.beer-slider>img {
+	height: auto;
+	max-width: 100%
+}
+.beer-reveal {
+	left: 0;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 50%;
+	top: 0;
+	transition: opacity .35s;
+	z-index: 1
+}
+.beer-reveal>:first-child {
+	height: 100%;
+	max-width: none;
+	width: 200%
+}
+.beer-reveal>img:first-child {
+	height: auto
+}
+.beer-range {
+	-moz-appearance: none;
+	-ms-touch-action: auto;
+	-webkit-appearance: slider-horizontal!important;
+	bottom: 0;
+	cursor: pointer;
+	height: 100%;
+	left: -1px;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	touch-action: auto;
+	width: calc(100% + 2px);
+	z-index: 2
+}
+.beer-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 300vh
+}
+.beer-range::-moz-range-thumb {
+	-webkit-appearance: none;
+	height: 300vh
+}
+.beer-range::-ms-tooltip {
+	display: none
+}
+.beer-handle {
+	background: hsla(0, 0%, 100%, .5);
+	border-radius: 50%;
+	box-shadow: 0 0 6px transparent;
+	color: #000;
+	height: 48px;
+	left: 50%;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	transition: background .3s, box-shadow .3s, opacity .5s .25s;
+	width: 48px;
+	z-index: 2
+}
+.beer-handle:after, .beer-handle:before {
+	border-left: 2px solid;
+	border-top: 2px solid;
+	content: "";
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	transform-origin: 0 0;
+	width: 10px
+}
+.beer-handle:before {
+	left: 10px;
+	transform: rotate(-45deg)
+}
+.beer-handle:after {
+	right: 0;
+	transform: rotate(135deg)
+}
+.beer-range:focus~.beer-handle {
+	background: hsla(0, 0%, 100%, .85);
+	box-shadow: 0 0 3px rgba(0, 0, 0, .4)
+}
+.beer-reveal[data-beer-label]:after, .beer-slider[data-beer-label]:after {
+	background: hsla(0, 0%, 100%, .75);
+	border-radius: .125rem;
+	content: attr(data-beer-label);
+	line-height: 1;
+	padding: .5rem;
+	position: absolute;
+	top: 1.5rem
+}
+.beer-slider[data-beer-label]:before {
+	right: 1.5rem
+}
+.beer-reveal[data-beer-label]:before {
+	left: 1.5rem
+}
+.beer-reveal[data-beer-label=""]:before, .beer-slider[data-beer-label=""]:before {
+	content: none
+}
+.beer-ready .beer-handle, .beer-ready .beer-reveal {
+	opacity: 1
+}
+</style>
   <link href="https://cdn.jsdelivr.net/gh/wtaype/awombe/mifonts.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -29,596 +152,97 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
   </div>
-  <div class="main">
-    <section class="section-gallery">
-      <div class="hidden">
-        <div class="linkwrapper">
-          <a href="#" class="w-inline-block">
-            <div class="alllinks">This is some text inside of a div block.</div>
-          </a>
-        </div>
-        <div class="buttonwrapper">
-          <a href="#" class="default-button w-button">Button Text</a>
-        </div>
-      </div>
-      <div class="slider-wrapper">
-        <div class="container-large">
-          <div class="padding-large3rem">
-            <div class="gallery20_component">
-              <div data-delay="4000" data-animation="slide" class="gallery20_slider-2 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="false">
-                <div class="gallery20_mask w-slider-mask">
-                  <div data-w-id="54f5d72d-907f-c89e-5743-63a6a8c83d73" class="gallery20_slide w-slide">
-                    <div class="slideritem">
-                      <div class="w-embed"><!--  Toggle element hover on it activate overlay  -->
-                        <div class="uk-inline uk-margin uk-transition-toggle">
-                          <img src="https://lystrastyle.netlify.app/assets/images/homevideostill.jpeg" alt="Lystra Beauty">
-                          <div class="uk-overlay uk-light uk-position-bottom">
-                            <h1>Unlock glowing, hair-free skin</h1>
-                          </div>
-                          <div class="uk-position-cover uk-overlay-primary uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
-                            <!--   Overlay content   -->
-                            <div class="uk-position-center uk-text-center uk-light">
-                              <!--     Add some animation for beauty     -->
-                              <p class="uk-margin-large uk-transition-slide-bottom">
-                                <a href="#" class="uk-button uk-button-large uk-button-default">Shop Now</a>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="03825a0f-8b14-ba97-ff6c-8ab0b44d2ce0" class="gallery20_slide w-slide">
-                    <div class="slideritem">
-                      <div class="w-embed">
-                        <div data-w-id="54f5d72d-907f-c89e-5743-63a6a8c83d73" class="gallery20_slide w-slide">
-                          <div class="slideritem">
-                            <div class="w-embed"><!--   Toggle element hover on it activate overlay   -->
-                              <div class="uk-inline uk-margin uk-transition-toggle">
-                                <div>
-                                  <video src="https://lystrastyle.netlify.app/assets/images/homevideo2.mp4" width="1600" height="1200" loop="" muted="" playsinline="" uk-video="autoplay: inview"></video>
-                                </div>
-                                <div class="uk-overlay uk-light uk-position-bottom">
-                                  <h1>Dermaplaning reinvented</h1>
-                                </div>
-                                <div class="uk-position-cover uk-overlay-primary uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
-                                  <!--   Overlay content   -->
-                                  <div class="uk-position-center uk-text-center uk-light">
-                                    <!--     Add some animation for beauty     -->
-                                    <p class="uk-margin-large uk-transition-slide-bottom">
-                                      <a href="#" class="uk-button uk-button-large uk-button-default"> Shop Now</a>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="6432134c-bec3-ea96-71e6-f8908e851c9b" class="gallery20_slide w-slide">
-                    <div class="slideritem">
-                      <div class="w-embed">
-                        <div data-w-id="54f5d72d-907f-c89e-5743-63a6a8c83d73" class="gallery20_slide w-slide">
-                          <div class="slideritem">
-                            <div class="w-embed"><!--   Toggle element hover on it activate overlay   -->
-                              <div class="uk-inline uk-margin uk-transition-toggle">
-                                <div>
-                                  <video src="https://lystrastyle.netlify.app/assets/images/homevideo3.mp4" width="1600" height="1200" loop="" muted="" playsinline="" uk-video="autoplay: inview"></video>
-                                </div>
-                                <div class="uk-overlay uk-light uk-position-bottom">
-                                  <h1>Transform your skin while you cleanse</h1>
-                                </div>
-                                <div class="uk-position-cover uk-overlay-primary uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
-                                  <!--   Overlay content   -->
-                                  <div class="uk-position-center uk-text-center uk-light">
-                                    <!--     Add some animation for beauty     -->
-                                    <p class="uk-margin-large uk-transition-slide-bottom">
-                                      <a href="#" class="uk-button uk-button-large uk-button-default"> Shop Now</a>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="41d819ef-d4f7-5549-4d1c-c715814c2263" class="gallery20_slide w-slide">
-                    <div class="slideritem">
-                      <div class="w-embed">
-                        <div data-w-id="54f5d72d-907f-c89e-5743-63a6a8c83d73" class="gallery20_slide w-slide">
-                          <div class="slideritem">
-                            <div class="w-embed"><!--   Toggle element hover on it activate overlay   -->
-                              <div class="uk-inline uk-margin uk-transition-toggle">
-                                <div>
-                                  <video src="https://lystrastyle.netlify.app/assets/images/diamond_1.mp4" width="1600" height="1200" loop="" muted="" playsinline="" uk-video="autoplay: inview"></video>
-                                </div>
-                                <div class="uk-overlay uk-light uk-position-bottom">
-                                  <h1>Harness the power of diamonds</h1>
-                                </div>
-                                <div class="uk-position-cover uk-overlay-primary uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
-                                  <!--   Overlay content   -->
-                                  <div class="uk-position-center uk-text-center uk-light">
-                                    <!--     Add some animation for beauty     -->
-                                    <p class="uk-margin-large uk-transition-slide-bottom">
-                                      <a href="#" class="uk-button uk-button-large uk-button-default"> Shop Now</a>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="gallery20_arrow is-left w-slider-arrow-left">
-                  <div class="gallery20_arrow-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3.31066 8.75001L9.03033 14.4697L7.96967 15.5303L0.439339 8.00001L7.96967 0.469676L9.03033 1.53034L3.31066 7.25001L15.5 7.25L15.5 8.75L3.31066 8.75001Z" fill="black"></path>
-                    </svg></div>
-                </div>
-                <div class="gallery20_arrow w-slider-arrow-right">
-                  <div bind="f4ebe580-f695-ca75-513a-69bb1ea78f42" class="gallery20_arrow-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.6893 7.25L6.96967 1.53033L8.03033 0.469666L15.5607 8L8.03033 15.5303L6.96967 14.4697L12.6893 8.75H0.5V7.25H12.6893Z" fill="#000000"></path>
-                    </svg></div>
-                </div>
-                <div class="gallery20_slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="hero-felx">
-      <div id="w-node-_2c2877a2-23c2-1c77-87d7-831d343d0b70-24d4da7f" class="lystra-hero-text _33">
-        <div class="home-headerwrap">
-          <h2 class="homeeyebrow">Discover A new way to glow.</h2>
-          <h1 class="lystra-h1-home">Gently remove facial hair while you cleanse</h1>
-        </div>
-        <div class="home-subwrap">
-          <div class="lystra-pwrap-3">
-            <p class="lystra-p-home">Our Patented dermaplaning technology Effectively removes facial hair, dead skin cells, dirt and impurities while you cleanse. Gentle enough to use it daily even with sensitive skin.</p>
-          </div>
-          <div class="lystra-buttonleft-3">
-            <a bind="b095b8f9-2d36-e9f6-991e-67463a39196e" href="#" class="lystra-button w-button">Shop Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="heroflexright">
-        <div id="w-node-_2c2877a2-23c2-1c77-87d7-831d343d0b7e-24d4da7f" class="lystra-herobox1-3">
-          <div class="lystra-box1imagewrap">
-            <div data-w-id="2c2877a2-23c2-1c77-87d7-831d343d0b80" class="image80 square"><img sizes="(max-width: 479px) 92vw, (max-width: 767px) 60vw, 20vw" srcset="images/darria1-p-500.jpg 500w, images/darria1.jpg 744w" alt="The Lystra dermaplaning wand. Easy, safe and gentle" src="images/darria1.jpg" loading="lazy" class="image-9">
-              <div style="display:none;opacity:0" class="buttonoverlay">
-                <div class="buttonoverlaytext-3">Shop Now</div>
-              </div>
-            </div>
-            <div class="lystra-herobox-small">
-              <p class="lystra-p-right-2">Salon inspired technology<br>at home</p>
-            </div>
-          </div>
-        </div>
-        <div class="lystra-box2">
-          <div data-w-id="2c2877a2-23c2-1c77-87d7-831d343d0b8b" class="_100-image"><img sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 34vw, 24vw" srcset="images/homeherogradation-p-500.jpg 500w, images/homeherogradation-p-800.jpg 800w, images/homeherogradation-p-1080.jpg 1080w, images/homeherogradation.jpg 1114w" alt="The Lystra dermaplaning wand. Easy, safe and gentle" src="images/homeherogradation.jpg" loading="lazy" class="image-10">
-            <div style="display:none;opacity:0" class="buttonoverlay">
-              <div class="buttonoverlaytext-3">Shop Now</div>
-            </div>
-          </div>
-          <div class="lystra-herobox-small">
-            <p class="lystra-p-right-2">Wand and cushioning face wash</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mainmoviediv">
-      <div class="home-section2wrap">
-        <div class="section2-imagewrap">
-          <div class="backgroundbig"><img src="images/sectionvideohero.jpg" loading="lazy" sizes="100vw" srcset="images/sectionvideohero-p-500.jpg 500w, images/sectionvideohero-p-800.jpg 800w, images/sectionvideohero-p-1080.jpg 1080w, images/sectionvideohero-p-1600.jpg 1600w, images/sectionvideohero-p-2000.jpg 2000w, images/sectionvideohero-p-2600.jpg 2600w, images/sectionvideohero-p-3200.jpg 3200w, images/sectionvideohero.jpg 3836w" alt="How it Works" class="imageabsoute"></div>
-        </div>
-        <div class="homesection2-text">
-          <div class="videoheadline">How it works</div>
-          <div class="whiteoutlinebuttonwrap">
-            <a bind="b451ea08-fbfd-828e-48c1-5ad201b6a6d8" href="#" class="button-outline w-button">Discover the technology</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="largecenter">
-      <div></div>
-      <div class="bottommargin w-embed">
-        <div class="uk-inline">
-          <img src="https://lystrastyle.netlify.app/assets/images/techherocenter1.jpeg" width="1800" height="1200" alt="Gentle Exfoliation">
-          <div class="uk-overlay uk-light uk-position-center">
-            <h1 class="uk-heading-large">Gentle Exfoliation</h1>
-          </div>
+  <div class="navwrap-2">
+    <div class="navwrap-2">
+      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-lystra w-nav">
+        <a href="index.html" aria-current="page" class="lystralogo w-nav-brand w--current"><img width="180" loading="lazy" alt="" src="images/lystrablue.svg" class="image-11"></a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <a href="/about/" class="nav-link w-nav-link">About Us</a>
+          <a href="/technology/" class="nav-link w-nav-link">Technology</a>
+          <a href="/contact-us/" class="nav-link w-nav-link">Contact Us</a>
+          <a href="/contact-us/" class="nav-link w-nav-link">Shop</a>
+        </nav>
+        <div class="menu-button w-nav-button">
+          <div class="icon w-icon-nav-menu"></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="scrollerwrap">
-    <section class="section_banner15">
-      <div class="scrolltitlewrap">
-        <h1 class="scrollglow">3 Steps to Glow</h1>
-      </div>
-      <div class="banner15_component"></div>
-      <div class="marqueewrap">
-        <div class="marqueedouble">
-          <div class="w-layout-grid grid-6">
-            <div id="w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d299f9-24d4da7f" class="glowthird">
-              <div class="circlepurple">
-                <div>
-                  <div class="numberwhite">1</div>
-                </div>
-              </div>
-              <div class="stepright">
-                <div class="heading-style-h1">Lather up! 🫧✨</div>
-                <p class="_3stepparagraph">Wet your face and apply the cushioning cleanser. This will let the wand glide effortlessly over your skin.</p>
-              </div>
-              <div class="imagewrap-scroll"><img src="images/step1image.jpg" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 991px) 27vw, 9vw" srcset="images/step1image-p-500.jpg 500w, images/step1image-p-800.jpg 800w, images/step1image-p-1080.jpg 1080w, images/step1image-p-1600.jpg 1600w, images/step1image-p-2000.jpg 2000w, images/step1image-p-2600.jpg 2600w, images/step1image-p-3200.jpg 3200w, images/step1image.jpg 4096w" alt="Lather Up. Wet your face and apply the cushioning cleanser.  This will let the wand glide effortlessly over your skin." class="image-5"></div>
-            </div>
-            <div id="w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a05-24d4da7f" class="glowthird">
-              <div class="circlepurple">
-                <div>
-                  <div class="numberwhite">2</div>
-                </div>
-              </div>
-              <div class="stepright">
-                <div class="heading-style-h1">Glide to glow 💎✨</div>
-                <p class="_3stepparagraph">Glide the wand in a circular motion to remove facial hair, dead skin and impurities.<br>‍</p>
-              </div>
-              <div class="imagewrap-scroll"><img src="images/step2image.jpg" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 991px) 27vw, 9vw" srcset="images/step2image-p-500.jpg 500w, images/step2image-p-800.jpg 800w, images/step2image-p-1080.jpg 1080w, images/step2image-p-1600.jpg 1600w, images/step2image-p-2000.jpg 2000w, images/step2image-p-2600.jpg 2600w, images/step2image-p-3200.jpg 3200w, images/step2image.jpg 4096w" alt="Glide to glow. Glide the wand in a circular motion to remove facial hair, dead skin and impurities." class="image5"></div>
-            </div>
-            <div id="w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a13-24d4da7f" class="glowthird">
-              <div class="circlepurple">
-                <div>
-                  <div class="numberwhite">3</div>
-                </div>
-              </div>
-              <div class="stepright">
-                <div class="heading-style-h1">Rinse and radiate 💦🌟</div>
-                <p class="_3stepparagraph">Rinse your face. Get on with your day.<br><br>‍</p>
-              </div>
-              <div class="imagewrap-scroll"><img src="images/step3image.jpg" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 991px) 27vw, 9vw" srcset="images/step3image-p-500.jpg 500w, images/step3image-p-800.jpg 800w, images/step3image-p-1080.jpg 1080w, images/step3image-p-1600.jpg 1600w, images/step3image-p-2000.jpg 2000w, images/step3image-p-2600.jpg 2600w, images/step3image-p-3200.jpg 3200w, images/step3image.jpg 4096w" alt="Rinse and radiate. Rinse your face. Get on with your day." class="image5"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="homepage4">
-    <div class="w-embed"><!-- new section -->
-      <div class="uk-width-expand  uk-margin ">
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 0; velocity: 0.03; finite: false; easing: linear; pause-on-hover: true; draggable: true;">
-          <div class="uk-slider-items uk-child-width-1-2  uk-child-width-1-2 @muk-grid">
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step1image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left uk-padding-small uk-panel">
-                  <h2>1. Lather Up!</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step2image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left uk-padding-small uk-panel">
-                  <h2>2. Glide to Glow</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step3image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left uk-padding-small  uk-panel">
-                  <h2>3. Rinse and Radiate</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step1image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left uk-padding-small uk-panel">
-                  <h2>1. Lather Up!</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step2image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left  uk-padding-small uk-panel">
-                  <h2>2. Glide to Glow</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="uk-panel">
-                <img src="https://sliderhome.netlify.app/images/step3image-p-3200.jpg" width="600" height="600" alt="">
-                <div class="uk-position-bottom-left uk-padding-small uk-panel">
-                  <h2>3. Rinse and Radiate</h2>
-                </div>
-                <div class="uk-position-center uk-panel">
-                  <p></p>
-                </div>
+  <div class="home-slider">
+    <div class="w-embed">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="">
+        <div class="uk-slider-items  uk-grid">
+          <div class="uk-width-4-5">
+            <div class="uk-panel">
+              <img src="https://lystrastyle.netlify.app/assets/images/herostill1.jpg" width="1200" height="650" alt="Transform Your Skin While You Cleanse">
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100">Transform Your Skin While You Cleanse</h2>
+                <p uk-slider-parallax="x: 200,-200">
+                  <a href="/dermaplaning-wand-cushioning-cleanser-set/"><button class="uk-button uk-button-default uk-button-small">Shop Now</button></a>
+                </p>
               </div>
             </div>
           </div>
-          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="" uk-slidenav-previous="" uk-slider-item="previous"></a>
-          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="" uk-slidenav-next="" uk-slider-item="next"></a>
+          <div class="uk-width-4-5">
+            <div class="uk-panel">
+              <div>
+                <video aria-label="Video aria label" src="https://lystrastyle.netlify.app/assets/images/lystrahome3.mp4" width="1200" height="650" loop="" muted="" playsinline="" uk-video="autoplay: true"></video>
+              </div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100">New Patented Technology</h2>
+                <p uk-slider-parallax="x: 200,-200">
+                  <a href="/technology/"><button class="uk-button uk-button-default uk-button-small">Technology</button></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-4-5">
+            <div class="uk-panel">
+              <div>
+                <video aria-label="Video aria label" src="https://lystrastyle.netlify.app/assets/images/lystrahome2.mp4" width="1200" height="650" loop="" muted="" playsinline="" uk-video="autoplay: true"></video>
+              </div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100">Remove Facial Hair while you cleanse</h2>
+                <p uk-slider-parallax="x: 200,-200">
+                  <a href="/about/"><button class="uk-button uk-button-default uk-button-small">About</button></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-4-5">
+            <div class="uk-panel">
+              <div>
+                <video aria-label="Video aria label" src="https://lystrastyle.netlify.app/assets/images/lystrahome4.mp4" width="1200" height="650" loop="" muted="" playsinline="" uk-video="autoplay: true"></video>
+              </div>
+              <div class="uk-position-center uk-text-center">
+                <h2 uk-slider-parallax="x: 100,-100">Unlock Glowing, Hair-Free Skin </h2>
+                <p uk-slider-parallax="x: 200,-200">
+                  <a href="/dermaplaning-wand-cushioning-cleanser-set/"><button class="uk-button uk-button-default uk-button-small">Shop Now</button></a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="" uk-slidenav-previous="" uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="" uk-slidenav-next="" uk-slider-item="next"></a>
       </div>
-      <!-- new section -->
     </div>
   </div>
+  <section class="section_banner15">
+    <div class="banner15_component"></div>
+  </section>
+  <div class="homepage4"></div>
   <div class="pp-section5">
-    <h1 class="pp-section5head center">Real People, Real Results</h1>
+    <h1 class="pp-section5head center">See the Results</h1>
     <div class="pp-centertext">Removing dead skin cells and peach fuzz allows light to bounce off your skin more evenly, resulting in a noticeable glow.</div>
     <div class="w-layout-grid grid-13">
       <div class="content-wrap">
-        <div class="image-wrapper"><img sizes="(max-width: 479px) 200.00001525878906px, (max-width: 991px) 90vw, 700.0000610351562px" srcset="images/after1-p-500.jpg 500w, images/after1-p-800.jpg 800w, images/after1-p-1080.jpg 1080w, images/after1-p-1600.jpg 1600w, images/after1-p-2000.jpg 2000w, images/after1-p-2600.jpg 2600w, images/after1-p-3200.jpg 3200w, images/after1.jpg 3307w" alt="Real People, Real Results Before" src="images/after1.jpg" loading="lazy" class="image-three"><img sizes="(max-width: 479px) 200.00001525878906px, (max-width: 991px) 90vw, 700.0000610351562px" srcset="images/before1-p-500.jpg 500w, images/before1-p-800.jpg 800w, images/before1-p-1080.jpg 1080w, images/before1-p-1600.jpg 1600w, images/before1-p-2000.jpg 2000w, images/before1-p-2600.jpg 2600w, images/before1-p-3200.jpg 3200w, images/before1.jpg 3307w" alt="Real People, Real Results After" src="images/before1.jpg" loading="lazy" class="image-four"></div>
+        <div class="image-wrapper"><img sizes="(max-width: 991px) 45vw, 350px" srcset="images/beforeAA.jpg 500w, images/beforeAA.jpg 746w" alt="Real People, Real Results After" src="images/beforeAA.jpg" loading="lazy" class="image-four"><img sizes="(max-width: 991px) 45vw, 350px" srcset="images/afterAA.jpg 500w, images/afterAA.jpg 746w" alt="Real People, Real Results Before" src="images/afterAA.jpg" loading="lazy" class="image-three"></div>
         <div class="pp-scanner"></div>
       </div>
       <div class="content-wrap">
-        <div class="image-wrapper"><img sizes="(max-width: 479px) 200.00001525878906px, (max-width: 991px) 90vw, 700.0000610351562px" srcset="images/before2-p-500.jpg 500w, images/before2-p-800.jpg 800w, images/before2-p-1080.jpg 1080w, images/before2-p-1600.jpg 1600w, images/before2-p-2000.jpg 2000w, images/before2-p-2600.jpg 2600w, images/before2-p-3200.jpg 3200w, images/before2.jpg 3307w" alt="Real People, Real Results Before" src="images/before2.jpg" loading="lazy" class="image-one"><img sizes="(max-width: 479px) 200.00001525878906px, (max-width: 991px) 90vw, 700.0000610351562px" srcset="images/after2-p-500.jpg 500w, images/after2-p-800.jpg 800w, images/after2-p-1080.jpg 1080w, images/after2-p-1600.jpg 1600w, images/after2-p-2000.jpg 2000w, images/after2-p-2600.jpg 2600w, images/after2-p-3200.jpg 3200w, images/after2.jpg 3307w" alt="Real People, Real Results After" src="images/after2.jpg" loading="lazy" class="image-two"></div>
+        <div class="image-wrapper"><img sizes="(max-width: 991px) 45vw, 350px" srcset="images/beforeA.jpg 500w, images/beforeA.jpg 746w" alt="Real People, Real Results After" src="images/beforeA.jpg" loading="lazy" class="image-two"><img sizes="(max-width: 991px) 45vw, 350px" srcset="images/afterB.jpg 500w, images/afterB.jpg 746w" alt="Real People, Real Results Before" src="images/afterB.jpg" loading="lazy" class="image-one"></div>
         <div class="pp-scanner"></div>
-      </div>
-    </div>
-  </div>
-  <div class="homepage5">
-    <div class="left-wrap"><img src="images/homeleftheroD.jpg" loading="lazy" sizes="(max-width: 991px) 100vw, 50vw" srcset="images/homeleftheroD-p-500.jpg 500w, images/homeleftheroD-p-800.jpg 800w, images/homeleftheroD-p-1080.jpg 1080w, images/homeleftheroD-p-1600.jpg 1600w, images/homeleftheroD.jpg 1676w" alt="" class="imageabsoute"></div>
-    <div class="right-wrap blush">
-      <div class="homesectiontextblock">
-        <div class="eyebrowwrap">
-          <div class="eyebrow-home">NEW PATENTED TECHNOLOGY</div>
-        </div>
-        <div class="lystradifference">
-          <h1 class="home5heading">The Lystra difference</h1>
-        </div>
-        <div class="imagewrap"><img src="images/homeabout1.svg" loading="lazy" alt="Our patented nano-diamond exfoliation surface lays flat on the skin, ensuring a healthy interaction with your skin. 💎" class="image5"></div>
-        <div class="lystrabluetext">
-          <div>Our patented nano-diamond exfoliation surface lays flat on the skin, ensuring a healthy interaction with your skin. 💎</div>
-          <div class="imagewrap"><img src="images/razorhome5.svg" loading="lazy" alt="Ordinary straight blade dermaplaning tools can bulge or dig into the skin  🫣️"></div>
-          <div>Ordinary straight blade dermaplaning tools can bulge or dig into the skin  🫣️</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="homepage6">
-    <div class="section6wrap">
-      <div class="eyebrow6">LEAVE NOTHING BUT GLOWING SMOOTH SKIN</div>
-      <h1 class="section6head">Dermaplaning redefined</h1>
-      <div class="section6imagewrap"><img src="images/home6hero.png" loading="lazy" sizes="(max-width: 479px) 100vw, 96vw" srcset="images/home6hero-p-500.png 500w, images/home6hero-p-800.png 800w, images/home6hero-p-1080.png 1080w, images/home6hero-p-1600.png 1600w, images/home6hero.png 1932w" alt="Dermaplaning redefined"></div>
-      <div class="section6textwrap">
-        <p class="paragraph1-2">Our scientists have developed the first ever flat exfoliation surface with nano-diamond technology, made to effortlessly unlock your skin&#x27;s radiance.<br><br>Our patented nano-diamond exfoliation surface lays flat on the skin, ensuring a healthy interaction with your skin and hair.<br><br>This allows, in combination with our lathering cleanser, effortless gliding to deliver a gentle way to lift away hairs, dead skin cells, and dirt  through light pressure and circular motion.<br>‍</p>
-        <a href="#" class="linkpointer">Learn More</a>
-      </div>
-    </div>
-  </div>
-  <div class="homepage7faq">
-    <div class="faqwrapper">
-      <div class="faqheadwrap">
-        <h1 class="home5heading">FAQs</h1>
-      </div>
-      <div class="faqcenter">
-        <div class="w-layout-grid faqgrid">
-          <div id="w-node-f1361a21-9df6-f6b1-473d-0fb9a791c5d5-24d4da7f" class="leftfaq"><img src="images/homeleftheroD.jpg" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 81vw, 540px" srcset="images/homeleftheroD-p-500.jpg 500w, images/homeleftheroD-p-800.jpg 800w, images/homeleftheroD-p-1080.jpg 1080w, images/homeleftheroD-p-1600.jpg 1600w, images/homeleftheroD.jpg 1676w" alt="" class="imagecover"></div>
-          <div class="right-wrap">
-            <div class="code-embed w-embed">
-              <ul uk-accordion="">
-                <li>
-                  <a class="uk-accordion-title" href="">What is dermaplaning?</a>
-                  <div class="uk-accordion-content">
-                    <p>Dermaplaning is a procedure that exfoliates your skin and gets rid of dirt and vellus hair, better known as “peach fuzz.” It's different from dermabrasion, where an aesthetician or doctor uses a high-speed, rotating brush to exfoliate the skin. With dermaplaning, they use a scalpel, or a tool called a dermatome.</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How is this product different from dermaplaning?</a>
-                  <div class="uk-accordion-content">
-                    <p>Our patented dermaplaning wand resurfaces skin, removing dead cells and facial hair gently and silently unlike straight blade dermaplaning products and is gentle enough to use daily. </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What comes in my dermaplaning wand kit?</a>
-                  <div class="uk-accordion-content">
-                    <p>1 x Wand with protective cap<br>
-                      1 x Dermaplaning Facial Cleanser (1.0 oz)
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What comes in my refill head kit?</a>
-                  <div class="uk-accordion-content">
-                    <p>2 x Replacement Heads</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I change the heads?</a>
-                  <div class="uk-accordion-content">
-                    <p>Simply pull the old head out and click the new head into the wand. </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How long does a head last for? </a>
-                  <div class="uk-accordion-content">
-                    <p>We expect a head to last for 2 months or longer when used with the Dawn and Dusk lathering cleanser under typical usage conditions. </p>
-                    <p>The exact life of a head will depend upon your individual circumstances since it is impacted by how often you use it and the condition of your hair and skin. Using your wand with face washes and exfoliators other than the Dawn and Dusk cleanser can also damage and reduce the life of the heads. </p>
-                    <p>For best results we suggest changing your head every 2 months or more frequently. This helps the wand maintain it's optimal hair removal and exfoliation performance and helps it stay clean/hygienic and minimize buildup of dirt and debris. </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I dispose of my used head?</a>
-                  <div class="uk-accordion-content">
-                    <p>Dispose of your used head carefully and to keep out of the reach of children</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Where can I buy the dermaplaning wand?</a>
-                  <div class="uk-accordion-content">
-                    <p>https://www.lystrabeauty.com </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I use the primer/cleanser and the wand together, what steps should I follow?</a>
-                  <div class="uk-accordion-content">
-                    <p>You can go to this link to purchase:</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What is dermaplaning?</a>
-                  <div class="uk-accordion-content">
-                    <p>Step 1: Lather <br>
-                      Wet your face and hands. Lather one pump of our cleansing primer to your face. The cleanser is designed to help the wand glide over your face. <br>
-                      Step 2: Exfoliate & Remove<br>
-                      Remove the protective cap. Glide the wand flush to your face using small circular motions to exfoliate and remove hair. Use alight even pressure, like applying a serum.
-                      Tip: Avoid raised areas of the skin like moles or acne<br>
-                      Step 3: Rinse<br>
-                      When done, rinse the cleanser off. <br>
-                      Gentle enough to use daily. <br>
-                      For Best Results:<br>
-                      After each use, clean the wand by shaking under hot high-pressure water and let air dry. <br>
-                      Use only with our specially designed cleansing primer. Exfoliating cleaners can shorten the life of your head. Please do not use a q-tip, cotton pad, tissue or towel to clean or dry it as this may reduce its effectiveness. <br>
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I get the best results with my dermaplaning wand?</a>
-                  <div class="uk-accordion-content">
-                    <p>Wet your skin and massage the Cleanser into your face, do not rinse off the cleanser before using the Dermaplaning Wand.
-                      Use the Dermaplaning Wand lightly, moving in a circular motion where possible. The circles can be 1-2 inches across, lightly and quickly covering your face. Around smaller areas of your face, use smaller circles.
-                      On your first use, we would recommend pressing lightly and not going over the same area multiple times so that you can adjust the amount of exfoliation for your skin type when you next use the Wand.
-                      Try to avoid “scrubbing” your face or only moving the Dermaplaning Wand up and down vertically. Avoid using the wand around eye area, eyebrows or on moles or raised skin.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What comes in my dermaplaning wand kit?</a>
-                  <div class="uk-accordion-content">
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Is the device fully waterproof?</a>
-                  <div class="uk-accordion-content">
-                    <p>Yes, the wand is waterproof</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Will any part of the device rust?</a>
-                  <div class="uk-accordion-content">
-                    <p>No, the wand will not rust </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Is this battery operated or plug in device? </a>
-                  <div class="uk-accordion-content">
-                    <p>The wand is not powered</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What if my wand gets clogged?</a>
-                  <div class="uk-accordion-content">
-                    <p>If it’s clogged soak in hot water with dish soap for 10 minutes, then rinse under hot water</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Is the device fully waterproof?</a>
-                  <div class="uk-accordion-content">
-                    <p>Yes, the wand is waterproof</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Will any part of the device rust?</a>
-                  <div class="uk-accordion-content">
-                    <p>No, the wand will not rust </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Where can I find a copy of my dermaplaning wand usage instructions?</a>
-                  <div class="uk-accordion-content">
-                    <p>This is located on the box that your product came in. They are on the website or we will send you instructions if not included in kit
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Will my hair grow back thicker?</a>
-                  <div class="uk-accordion-content">
-                    <p>No. Dermaplaning does not interfere with the follicular structure of the hair, thus having no effect on hair growth whatsoever.</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Does hair grow in darker?</a>
-                  <div class="uk-accordion-content">
-                    <p>Yes, the wand is waterproof</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">Will any part of the device rust?</a>
-                  <div class="uk-accordion-content">
-                    <p>No. The hair will grow back, but it won't change color or thickness. Dermaplaning does not interfere with the follicular structure of the hair, thus having no effect on hair growth whatsoever.</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I store the dermaplaning wand?</a>
-                  <div class="uk-accordion-content">
-                    <p>Store as you do your other shaving/dermaplaning products.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I store the cleanser or primer?</a>
-                  <div class="uk-accordion-content">
-                    <p>Store as you do your other shaving/dermaplaning products.
-                      Do not freeze.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How long will the cleanser last?</a>
-                  <div class="uk-accordion-content">
-                    <p>On average 3 months.</p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How do I store the dermaplaning wand?</a>
-                  <div class="uk-accordion-content">
-                    <p>Store as you do your other shaving/dermaplaning products.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">How many pumps of cleanser should be used?</a>
-                  <div class="uk-accordion-content">
-                    <p>1-2 pumps per use, more can be used if needed </p>
-                  </div>
-                </li>
-                <li>
-                  <a class="uk-accordion-title" href="">What if I run out of cleanser?</a>
-                  <div class="uk-accordion-content">
-                    <p>Please use a lathering cleanser which doesn’t have exfoliating ingredients
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -632,25 +256,25 @@
           <div data-w-id="344b2fe4-b1bf-dced-751f-e09c4a8b9686" class="newsimage">
             <div style="display:none;opacity:0" class="buttonoverlay">
               <div class="buttonoverlaytext-3">Read More</div>
-            </div><img sizes="(max-width: 479px) 90vw, (max-width: 767px) 33vw, 22vw" srcset="images/lystrahome1-p-500.png 500w, images/lystrahome1.png 668w" alt="" src="images/lystrahome1.png" loading="lazy" class="image-8">
+            </div><img sizes="(max-width: 479px) 90vw, (max-width: 767px) 33vw, (max-width: 991px) 20vw, 22vw" srcset="images/lystrahome1-p-500.png 500w, images/lystrahome1.png 668w" alt="" src="images/lystrahome1.png" loading="lazy" class="image-8">
           </div>
           <div class="lystra-expertskintext">
             <div class="expoert-eybrow">
               <div class="text-block">Beauty Bites</div>
             </div>
             <div class="expert-headline">
-              <div class="text-block-2">What is dermaplaning</div>
+              <div class="scrollglow">What is dermaplaning</div>
             </div>
             <div class="expert-paragraph">
               <div class="text-block-3">Removal of facial hair and dead skin cells.</div>
             </div>
             <div class="expert-paragraph">
-              <a href="#" class="lystra-textlink">Read more</a>
+              <a href="/about/" class="lystra-textlink">Read more</a>
             </div>
           </div>
         </div>
         <div class="newsblock">
-          <div data-w-id="344b2fe4-b1bf-dced-751f-e09c4a8b9699" class="newsimage"><img sizes="(max-width: 479px) 90vw, (max-width: 767px) 33vw, 22vw" srcset="images/lystrafooter2-p-500.png 500w, images/lystrafooter2.png 668w" alt="" src="images/lystrafooter2.png" loading="lazy" class="image-8">
+          <div data-w-id="344b2fe4-b1bf-dced-751f-e09c4a8b9699" class="newsimage"><img sizes="(max-width: 479px) 90vw, (max-width: 767px) 33vw, (max-width: 991px) 20vw, 22vw" srcset="images/lystrafooter2-p-500.png 500w, images/lystrafooter2.png 668w" alt="" src="images/lystrafooter2.png" loading="lazy" class="image-8">
             <div style="display:none;opacity:0" class="buttonoverlay">
               <div class="buttonoverlaytext-3">Read More</div>
             </div>
@@ -660,13 +284,13 @@
               <div class="text-block">Expert knowledge</div>
             </div>
             <div class="expert-headline">
-              <div class="text-block-2">Our technology</div>
+              <div class="scrollglow">Our technology</div>
             </div>
             <div class="expert-paragraph">
               <div class="text-block-3">The nano diamond smoothing surface</div>
             </div>
             <div class="expert-paragraph">
-              <a href="#" class="lystra-textlink">Read more</a>
+              <a href="/technology/" class="lystra-textlink">Read more</a>
             </div>
           </div>
         </div>
@@ -714,27 +338,5 @@
     }
   });
 </script>
-  <style>
-  .beer-slider {
-    height: 100% !important;
-  }
-  .beer-slider,
-  .beer-slider>img {
-    width: 100% !important;
-  }
-  .beer-range::-webkit-slider-thumb {
-    -webkit-appearance: auto;
-  }
-    .face-slider {
-    height: 100% !important;
-  }
-  .face-slider,
-  .face-slider>img {
-    width: 100% !important;
-  }
-  .face-range::-webkit-slider-thumb {
-    -webkit-appearance: auto;
-  }
-</style>
 </body>
 </html>
