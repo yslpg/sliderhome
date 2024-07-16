@@ -894,6 +894,7 @@ a {
 }
 
 .section_banner15 {
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   max-width: none;
@@ -901,7 +902,7 @@ a {
   margin-right: auto;
   padding-top: 55px;
   padding-bottom: 55px;
-  display: flex;
+  display: block;
   position: relative;
 }
 
@@ -2112,12 +2113,15 @@ a {
 }
 
 .trioimage {
+  object-fit: cover;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 225px;
+  height: 200px;
+  min-height: 200px;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .triothirds {
@@ -2150,6 +2154,62 @@ a {
   text-align: center;
   font-size: 1.1rem;
   line-height: 140%;
+}
+
+.trio-wrap {
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 0;
+  display: flex;
+  position: relative;
+}
+
+.grid-17 {
+  width: 100%;
+}
+
+.trio-grid {
+  flex: 1;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.trio-card {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.trio-shader {
+  background-image: linear-gradient(100deg, #fdeeeb, #f0e1fb);
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  display: block;
+  position: relative;
+}
+
+.code-embed-2 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 @media screen and (max-width: 991px) {
@@ -2311,7 +2371,7 @@ a {
   }
 
   .section_banner15 {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     max-width: 600px;
     margin-left: auto;
@@ -2451,6 +2511,11 @@ a {
     font-size: 1.4rem;
   }
 
+  .grid-13 {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
   .image-wrapper {
     height: auto;
     min-height: auto;
@@ -2555,6 +2620,31 @@ a {
   .triothirds {
     grid-template-columns: 1fr;
     max-width: 700px;
+  }
+
+  .trio-wrap {
+    padding: 0;
+  }
+
+  .trio-grid {
+    flex-flow: column;
+    flex: 1;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .trio-card {
+    width: 90%;
+  }
+
+  .trio-shader {
+    justify-content: flex-start;
+    align-items: center;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 }
 
@@ -3125,10 +3215,12 @@ a {
   }
 
   .content-wrap {
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .image-wrapper {
+    justify-content: center;
+    align-items: center;
     min-height: 200px;
   }
 
@@ -3221,11 +3313,6 @@ a {
   .trioimage {
     min-height: 225px;
   }
-}
-
-#w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d299f9-24d4da7f, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a05-24d4da7f, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a13-24d4da7f {
-  align-self: center;
-  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfdfe-d820a03d {
@@ -3355,6 +3442,11 @@ a {
   justify-self: center;
 }
 
+#w-node-a93971af-e027-a18c-e606-e8a6928def3c-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def45-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def4f-c2dee5db {
+  align-self: start;
+  justify-self: center;
+}
+
 @media screen and (max-width: 991px) {
   #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfdfe-d820a03d {
     grid-column: 2 / 12;
@@ -3388,7 +3480,6 @@ a {
     grid-area: span 1 / span 2 / span 1 / span 2;
   }
 }
-
 
 
 @font-face {
