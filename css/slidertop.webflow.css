@@ -181,6 +181,7 @@ a {
 }
 
 .lystra-h1-home {
+  margin-top: 5px;
   font-family: Braunlinear, sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
@@ -1675,6 +1676,7 @@ a {
 .homeeyebrow {
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: 0;
   font-family: Braunlinear, sans-serif;
   font-size: .8rem;
   font-weight: 400;
@@ -1743,7 +1745,7 @@ a {
   position: relative;
 }
 
-.div-block-4 {
+.abouttall {
   height: 100%;
 }
 
@@ -2212,6 +2214,114 @@ a {
   position: relative;
 }
 
+.techheader1 {
+  text-align: center;
+  margin-top: 5px;
+  font-family: Braunlinear, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 105%;
+}
+
+.lystra-hero-text-2 {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 2%;
+  padding-right: 39px;
+  position: relative;
+}
+
+.techquarterheadline {
+  text-align: center;
+  margin-bottom: 72px;
+  font-family: Braunlinear, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 150%;
+  position: relative;
+}
+
+.techdoubles {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: grid;
+}
+
+.techquarterwrap {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.tech-wrap {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative;
+}
+
+.techvideowrap {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.techimagewrap {
+  width: 700px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.lystra-pwrap-5 {
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 37px;
+  font-family: Braunlinear, sans-serif;
+  display: flex;
+  position: relative;
+}
+
+.lystraparagraphcenter {
+  text-align: center;
+  max-width: 400px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.tech-centerheadline {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.techtall {
+  aspect-ratio: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 @media screen and (max-width: 991px) {
   .padding-large3rem {
     padding-top: 1rem;
@@ -2646,6 +2756,13 @@ a {
     margin-right: auto;
     display: flex;
   }
+
+  .lystra-hero-text-2 {
+    flex-flow: column;
+    max-width: none;
+    padding-left: 2%;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2939,8 +3056,8 @@ a {
     overflow: hidden;
   }
 
-  .div-block-4 {
-    height: 400px;
+  .abouttall {
+    height: 800px;
     position: relative;
   }
 
@@ -3009,6 +3126,31 @@ a {
 
   .image-11 {
     max-width: 140px;
+  }
+
+  .lystra-hero-text-2 {
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 500px;
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
+  .techdoubles {
+    grid-template-columns: 1fr;
+  }
+
+  .techtall {
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+    margin-bottom: -13px;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    overflow: hidden;
   }
 }
 
@@ -3258,7 +3400,7 @@ a {
     right: 0%;
   }
 
-  .div-block-4 {
+  .abouttall {
     height: auto;
   }
 
@@ -3312,6 +3454,49 @@ a {
 
   .trioimage {
     min-height: 225px;
+  }
+
+  .techheader1 {
+    font-size: 2rem;
+  }
+
+  .lystra-hero-text-2 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    padding-right: 2%;
+  }
+
+  .techdoubles {
+    grid-auto-flow: row dense;
+  }
+
+  .techvideowrap {
+    height: auto;
+  }
+
+  .code-embed-3 {
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-height: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+  }
+
+  .techtall {
+    aspect-ratio: auto;
+    object-fit: cover;
+    height: auto;
+    margin-bottom: 0;
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 }
 
@@ -3419,6 +3604,11 @@ a {
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd2493c-cf587b2f {
   align-self: center;
   justify-self: start;
+}
+
+#w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b2d-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b3a-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b42-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b44-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b52-cf587b2f {
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_3f0b6121-b6a0-987c-d244-cd41172b0830-cf587b2f {
