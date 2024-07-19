@@ -3157,7 +3157,7 @@ a {
 
   .techimagewrap {
     width: 100%;
-    height: auto;
+    height: 380px;
   }
 
   .techvideoembed {
@@ -3495,9 +3495,10 @@ a {
 
   .techdoubles {
     grid-auto-flow: row dense;
+    align-self: center;
   }
 
-  .techvideowrap {
+  .techvideowrap, .techimagewrap {
     height: auto;
   }
 
@@ -3696,6 +3697,12 @@ a {
   }
 }
 
+@media screen and (max-width: 479px) {
+  #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b50-cf587b2f {
+    align-self: center;
+    justify-self: center;
+  }
+}
 
 @font-face {
   font-family: 'Braunlinear';
