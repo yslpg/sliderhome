@@ -1102,7 +1102,7 @@ a {
 }
 
 .uk-button {
-  background-color: var(--black);
+  background-color: #000 !important;
   color: var(--white);
   padding: 15px 43px;
 }
