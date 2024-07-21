@@ -206,6 +206,7 @@ a {
 .lystra-button-main {
   text-align: center;
   cursor: pointer;
+  color: #fff !important;
   background-color: #000;
   border: 0 solid #0000;
   min-width: 180px;
@@ -317,6 +318,8 @@ a {
 
 .lystra-buttonleft {
   font-family: var(--linear);
+  color: #fff !important;
+  background-color: #000;
   border: 0 #0000;
   justify-content: flex-start;
   align-items: center;
@@ -465,7 +468,7 @@ a {
 
 .button-outline:hover {
   border-color: var(--lystra-blue);
-  color: var(--lystra-blue);
+  color: #fff;
 }
 
 .section2-imagewrap {
