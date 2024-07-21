@@ -336,7 +336,7 @@ a {
 .buttonoverlay {
   opacity: .38;
   cursor: pointer;
-  background-color: #522fffb5;
+
   justify-content: center;
   align-items: center;
   display: none;
