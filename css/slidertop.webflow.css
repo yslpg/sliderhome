@@ -109,14 +109,7 @@ h5 {
   line-height: 105%;
 }
 
-a {
-  font-family: var(--linear);
-  color: var(--white);
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 100%;
-  text-decoration: none;
-}
+
 
 .container-large {
   width: 100%;
