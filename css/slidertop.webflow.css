@@ -2364,7 +2364,7 @@ a {
 }
 
 .success-message {
-  background-color: var(--lystra-blue);
+  background-color: #2b00ff;
   max-width: 400px;
 }
 
@@ -3309,8 +3309,9 @@ a {
     height: auto;
   }
 
-  .submit-button {
-    margin-bottom: 20px;
+  .submit-button{
+    background-color: #000;
+    color: #fff;
   }
 
   .footerbasegrid, .grid-18 {
