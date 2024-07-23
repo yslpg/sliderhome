@@ -7,7 +7,7 @@
   --blush: #fdedea;
   --lystra-plum: #6c12fe;
   --plum: #42035f;
-  --overlay: #2b00ffa3;
+  --overlay: rgba(43, 0, 255, .64);
 }
 
 .w-layout-grid {
@@ -111,6 +111,7 @@ h5 {
 
 a {
   font-family: var(--linear);
+  color: var(--white);
   cursor: pointer;
   font-size: 1rem;
   line-height: 100%;
@@ -150,12 +151,15 @@ a {
   margin-left: auto;
   margin-right: 2%;
   display: flex;
-  inset: auto 0% 0% auto;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
 }
 
 .gallery20_arrow.is-left {
   border-style: none;
-  border-color: #000000cf;
+  border-color: rgba(0, 0, 0, .81);
   max-height: 3rem;
   right: 4rem;
 }
@@ -187,11 +191,14 @@ a {
   height: 1.75rem;
   margin-left: 2%;
   font-size: .5rem;
-  inset: auto auto 0% 0%;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: auto;
 }
 
 .gallery20_slider-2 {
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -206,9 +213,8 @@ a {
 .lystra-button-main {
   text-align: center;
   cursor: pointer;
-  color: #fff !important;
   background-color: #000;
-  border: 0 solid #0000;
+  border: 0 solid rgba(0, 0, 0, 0);
   min-width: 180px;
   padding-left: 30px;
   padding-right: 30px;
@@ -252,7 +258,10 @@ a {
   min-height: auto;
   padding: 16px 0% 16px 0;
   position: relative;
-  inset: 0% 0% auto auto;
+  top: 0%;
+  bottom: auto;
+  left: auto;
+  right: 0%;
 }
 
 .lystra-p-home {
@@ -313,14 +322,15 @@ a {
   max-width: none;
   display: flex;
   position: relative;
-  inset: 0% 0% auto auto;
+  top: 0%;
+  bottom: auto;
+  left: auto;
+  right: 0%;
 }
 
 .lystra-buttonleft {
   font-family: var(--linear);
-  color: #fff !important;
-  background-color: #000;
-  border: 0 #0000;
+  border: 0 rgba(0, 0, 0, 0);
   justify-content: flex-start;
   align-items: center;
   margin-top: 17px;
@@ -338,12 +348,15 @@ a {
 .buttonoverlay {
   opacity: .38;
   cursor: pointer;
-  background-color: #522fffb5;
+  background-color: rgba(82, 47, 255, .71);
   justify-content: center;
   align-items: center;
   display: none;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .buttonoverlay:hover {
@@ -406,11 +419,14 @@ a {
   height: 20vw;
   max-height: none;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .mainmoviediv {
-  border: 0 #0000;
+  border: 0 rgba(0, 0, 0, 0);
   width: 100%;
   margin: 0 auto 135px;
   display: none;
@@ -418,7 +434,7 @@ a {
 
 .home-section2wrap {
   object-fit: cover;
-  border: 0 #0000;
+  border: 0 rgba(0, 0, 0, 0);
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -435,7 +451,7 @@ a {
 .homesection2-text {
   z-index: 99;
   color: #fff;
-  border: 0 #0000;
+  border: 0 rgba(0, 0, 0, 0);
   flex-flow: column;
   justify-content: center;
   align-self: center;
@@ -450,17 +466,20 @@ a {
   line-height: 150%;
   display: flex;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .whiteoutlinebuttonwrap {
-  background-color: #0000001c;
+  background-color: rgba(0, 0, 0, .11);
   margin-top: 24px;
 }
 
 .button-outline {
   cursor: pointer;
-  background-color: #00000008;
+  background-color: rgba(0, 0, 0, .03);
   border: 1px solid #fff;
   padding-left: 30px;
   padding-right: 30px;
@@ -468,18 +487,21 @@ a {
 
 .button-outline:hover {
   border-color: var(--lystra-blue);
-  color: #fff;
+  color: var(--lystra-blue);
 }
 
 .section2-imagewrap {
   object-fit: cover;
-  border: 0 #0000;
+  border: 0 rgba(0, 0, 0, 0);
   width: 100%;
   max-width: none;
   height: 100%;
   min-height: auto;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .default-button {
@@ -563,7 +585,7 @@ a {
 
 .swiper-slide.thumbnail-item {
   cursor: pointer;
-  border: 4px solid #0000;
+  border: 4px solid rgba(0, 0, 0, 0);
   border-radius: 0%;
   justify-content: center;
   align-items: center;
@@ -574,7 +596,7 @@ a {
   position: relative;
   overflow: hidden;
   transform: scale(.95);
-  box-shadow: 0 0 0 5.5px #0000;
+  box-shadow: 0 0 0 5.5px rgba(0, 0, 0, 0);
 }
 
 .margin-bottom, .margin-bottom.margin-small {
@@ -686,6 +708,7 @@ a {
   padding-left: 0;
   padding-right: 0;
   display: flex;
+  position: -webkit-sticky;
   position: sticky;
   top: 90px;
   bottom: 220px;
@@ -760,10 +783,13 @@ a {
 
 .slider-button-right.absolute-right {
   color: #2b00ff;
-  background-color: #fff0;
+  background-color: rgba(255, 255, 255, 0);
   display: none;
   position: absolute;
-  inset: 210px -100px auto auto;
+  top: 210px;
+  bottom: auto;
+  left: auto;
+  right: -100px;
 }
 
 .icon-embed-small {
@@ -823,10 +849,13 @@ a {
 .slider-button-left.absolute-left {
   color: #2b00ff;
   text-transform: capitalize;
-  background-color: #fff0;
+  background-color: rgba(255, 255, 255, 0);
   display: none;
   position: absolute;
-  inset: 210px auto auto -100px;
+  top: 210px;
+  bottom: auto;
+  left: -100px;
+  right: auto;
 }
 
 .lystra-buttonwrap {
@@ -1104,7 +1133,7 @@ a {
 }
 
 .uk-button {
-  background-color: #000 !important;
+  background-color: var(--black);
   color: var(--white);
   padding: 15px 43px;
 }
@@ -1242,6 +1271,11 @@ a {
   font-family: Braunlinear, sans-serif;
 }
 
+.tech-main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .scrollerwrap {
   background-image: linear-gradient(89deg, #f0e1fb 23%, #fdeeeb 81%);
   margin-left: auto;
@@ -1252,7 +1286,7 @@ a {
 .button-outline-2 {
   color: var(--white);
   cursor: pointer;
-  background-color: #00000008;
+  background-color: rgba(0, 0, 0, .03);
   border: 1px solid #fff;
   padding-left: 30px;
   padding-right: 30px;
@@ -1458,7 +1492,10 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .leftfaq {
@@ -1471,7 +1508,10 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .backgroundbig {
@@ -1482,7 +1522,10 @@ a {
   max-height: none;
   margin-bottom: 124px;
   position: relative;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .image-8 {
@@ -1823,7 +1866,10 @@ a {
   height: 100%;
   max-height: 400px;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .techheading {
@@ -1856,9 +1902,11 @@ a {
 }
 
 .bottommargin {
-  margin-bottom: 60px;
+  height: auto;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .mediawrap {
@@ -1937,6 +1985,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  position: -webkit-sticky;
   position: sticky;
   top: 0%;
 }
@@ -2132,10 +2181,9 @@ a {
   object-fit: cover;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 4 / 3;
   width: 100%;
-  height: 270px;
-  min-height: 270px;
+  height: 260px;
+  min-height: 260px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -2151,7 +2199,10 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .trio-text {
@@ -2350,7 +2401,10 @@ a {
   font-size: 1rem;
   display: flex;
   position: relative;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footergrid {
@@ -2449,7 +2503,7 @@ a {
 }
 
 .checkbox {
-  background-color: #3898ec21;
+  background-color: rgba(56, 152, 236, .13);
   min-width: 20px;
   min-height: 20px;
 }
@@ -2457,7 +2511,7 @@ a {
 .checkbox.w--redirected-checked {
   border-style: solid;
   border-color: var(--lystra-blue);
-  background-color: #3898ec00;
+  background-color: rgba(56, 152, 236, 0);
   background-image: url('../images/bluecheck.svg');
   background-position: 0 0;
   background-repeat: repeat;
@@ -2752,7 +2806,10 @@ a {
 
   .homesection2-text {
     min-height: auto;
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .section2-imagewrap {
@@ -2933,7 +2990,10 @@ a {
   }
 
   .imageabsoute {
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .leftfaq {
@@ -3013,7 +3073,10 @@ a {
   }
 
   .imagefaq {
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .aboutleft {
@@ -3433,7 +3496,10 @@ a {
     height: 400px;
     margin-bottom: -13px;
     position: absolute;
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
     overflow: hidden;
   }
 
@@ -3544,7 +3610,10 @@ a {
     height: 800px;
     margin-bottom: -13px;
     position: absolute;
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
     overflow: hidden;
   }
 
@@ -3822,7 +3891,10 @@ a {
     height: auto;
     margin-bottom: 0;
     position: relative;
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .abouttall {
@@ -3919,7 +3991,10 @@ a {
     height: auto;
     margin-bottom: 0;
     position: relative;
-    inset: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
   .navgrid1wrap {
@@ -3977,7 +4052,8 @@ a {
 }
 
 #w-node-fcb1eed8-ff06-05f0-a8d5-57e20137766a-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_2a0708b4-3dfe-4748-4c69-0118fd172655-d820a03d {
@@ -3985,60 +4061,74 @@ a {
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe19-d820a03d {
-  place-self: center end;
+  align-self: center;
+  justify-self: end;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe43-d820a03d {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe45-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe49-d820a03d {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe4b-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe4f-d820a03d {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe51-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe55-d820a03d {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe57-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe5b-d820a03d {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe5d-d820a03d {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_875c5cee-55fe-6667-1aeb-ecc27f959e5b-f16b93e6, #w-node-dbb30e03-9ed2-4727-0421-aaa3f5e43410-f16b93e6, #w-node-_7f94a512-2aa4-32d1-7a89-46912b26c729-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dee-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dfa-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4e08-f16b93e6 {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d72-7db9ad0a {
-  place-self: start center;
+  align-self: start;
+  justify-self: center;
 }
 
 #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d79-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d80-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d87-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d8f-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d97-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d9f-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372da6-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372db1-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dbb-7db9ad0a, #w-node-d2d04819-a34d-858e-684d-b887ec25ae55-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dd2-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dd9-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372de4-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372de7-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372deb-7db9ad0a {
   grid-area: span 1 / span 1 / span 1 / span 1;
-  place-self: start center;
+  align-self: start;
+  justify-self: center;
 }
 
 #w-node-_395f8a96-8bb4-72cc-0365-cb1f65daf2c9-8f957fc5 {
@@ -4046,7 +4136,8 @@ a {
 }
 
 #w-node-d9cb1d37-66e9-308e-e499-c8667a45037a-8f957fc5, #w-node-_8bd9869f-0209-77d8-a70e-2677ae2e267b-8f957fc5, #w-node-_34a68b4c-be45-5f94-aa05-5657b7294df8-8f957fc5, #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd2492f-cf587b2f {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd24937-cf587b2f {
@@ -4054,11 +4145,13 @@ a {
 }
 
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd2493c-cf587b2f {
-  place-self: center start;
+  align-self: center;
+  justify-self: start;
 }
 
 #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b2d-cf587b2f, #w-node-fcd38f7f-cfb6-5cba-f0e7-56d7864df4b8-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b44-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b52-cf587b2f {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-_3f0b6121-b6a0-987c-d244-cd41172b0830-cf587b2f {
@@ -4078,11 +4171,13 @@ a {
 }
 
 #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d299f9-d7c8ecc4, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a05-d7c8ecc4, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a13-d7c8ecc4 {
-  place-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 #w-node-a93971af-e027-a18c-e606-e8a6928def3c-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def45-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def4f-c2dee5db {
-  place-self: start center;
+  align-self: start;
+  justify-self: center;
 }
 
 #w-node-_3433ded7-ad65-13f9-7b3b-9190e3905c96-c2dee5db, #w-node-_210af617-cd8b-a328-015d-ee37146e4260-c2dee5db, #w-node-c847dcb8-a536-d030-bc4c-5d92617ff689-c2dee5db {
@@ -4095,7 +4190,8 @@ a {
   }
 
   #w-node-ccda12b7-b194-d6a8-4137-aa55efb7925c-cf587b2f, #w-node-d08a9682-468c-c577-f927-7306f0e44972-cf587b2f {
-    place-self: center;
+    align-self: center;
+    justify-self: center;
   }
 
   #w-node-ae43a264-5fb7-6bf9-8b94-ebdb5997ff2c-cf587b2f {
@@ -4103,7 +4199,8 @@ a {
   }
 
   #w-node-ae43a264-5fb7-6bf9-8b94-ebdb5997ff2e-cf587b2f {
-    place-self: center;
+    align-self: center;
+    justify-self: center;
   }
 }
 
@@ -4123,45 +4220,44 @@ a {
 
 @media screen and (max-width: 479px) {
   #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b50-cf587b2f {
-    place-self: center;
+    align-self: center;
+    justify-self: center;
   }
 }
 
 
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-light.otf") format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-bold.otf") format('opentype');
+  src: url('https://sliderhome.netlify.app/fonts/braunlinear-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-thin.otf") format('opentype');
-  font-weight: 100;
+  src: url('https://sliderhome.netlify.app/fonts/braunlinear-light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-medium.otf") format('opentype');
+  src: url('https://sliderhome.netlify.app/fonts/braunlinear-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-regular.otf") format('opentype');
+  src: url('https://sliderhome.netlify.app/fonts/braunlinear-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
-
+@font-face {
+  font-family: 'Braunlinear';
+  src: url('https://sliderhome.netlify.app/fonts/braunlinear-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
