@@ -2380,6 +2380,8 @@ a {
   margin-right: auto;
   padding: 33px;
   font-size: 1rem;
+  width: 100%:
+  min-width: 100%;
 }
 
 .footerbasegrid {
@@ -3315,6 +3317,7 @@ a {
   }
 
   .footerbasegrid, .grid-18 {
+
     grid-template-columns: 1fr;
   }
 
