@@ -2456,8 +2456,8 @@ a {
 .form {
   flex-flow: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 100%;
+  align-items: flex-center;
+  width: 80%;
   min-width: auto;
   max-width: none;
   height: auto;
