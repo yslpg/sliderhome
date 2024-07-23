@@ -1242,11 +1242,6 @@ a {
   font-family: Braunlinear, sans-serif;
 }
 
-.main {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .scrollerwrap {
   background-image: linear-gradient(89deg, #f0e1fb 23%, #fdeeeb 81%);
   margin-left: auto;
