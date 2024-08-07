@@ -7,7 +7,7 @@
   --lystra-plum: #6c12fe;
   --lystra-peach: #f6bbaf;
   --plum: #42035f;
-  --overlay: rgba(43, 0, 255, .64);
+  --overlay: #2b00ffa3;
 }
 
 .w-layout-grid {
@@ -145,7 +145,7 @@ a {
   text-align: center;
   cursor: pointer;
   background-color: #000;
-  border: 0 solid rgba(0, 0, 0, 0);
+  border: 0 solid #0000;
   min-width: 180px;
   padding-left: 30px;
   padding-right: 30px;
@@ -189,10 +189,7 @@ a {
   min-height: auto;
   padding: 16px 0% 16px 0;
   position: relative;
-  top: 0%;
-  bottom: auto;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% auto auto;
 }
 
 .lystra-p-home {
@@ -253,15 +250,12 @@ a {
   max-width: none;
   display: flex;
   position: relative;
-  top: 0%;
-  bottom: auto;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% auto auto;
 }
 
 .lystra-buttonleft {
   font-family: var(--linear);
-  border: 0 rgba(0, 0, 0, 0);
+  border: 0 #0000;
   justify-content: flex-start;
   align-items: center;
   margin-top: 17px;
@@ -279,15 +273,12 @@ a {
 .buttonoverlay {
   opacity: .38;
   cursor: pointer;
-  background-color: rgba(82, 47, 255, .71);
+  background-color: #522fffb5;
   justify-content: center;
   align-items: center;
   display: none;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .buttonoverlay:hover {
@@ -350,14 +341,11 @@ a {
   height: 20vw;
   max-height: none;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .mainmoviediv {
-  border: 0 rgba(0, 0, 0, 0);
+  border: 0 #0000;
   width: 100%;
   margin: 0 auto 135px;
   display: none;
@@ -365,7 +353,7 @@ a {
 
 .home-section2wrap {
   object-fit: cover;
-  border: 0 rgba(0, 0, 0, 0);
+  border: 0 #0000;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -382,7 +370,7 @@ a {
 .homesection2-text {
   z-index: 99;
   color: #fff;
-  border: 0 rgba(0, 0, 0, 0);
+  border: 0 #0000;
   flex-flow: column;
   justify-content: center;
   align-self: center;
@@ -397,20 +385,17 @@ a {
   line-height: 150%;
   display: flex;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .whiteoutlinebuttonwrap {
-  background-color: rgba(0, 0, 0, .11);
+  background-color: #0000001c;
   margin-top: 24px;
 }
 
 .button-outline {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, .03);
+  background-color: #00000008;
   border: 1px solid #fff;
   padding-left: 30px;
   padding-right: 30px;
@@ -423,16 +408,13 @@ a {
 
 .section2-imagewrap {
   object-fit: cover;
-  border: 0 rgba(0, 0, 0, 0);
+  border: 0 #0000;
   width: 100%;
   max-width: none;
   height: 100%;
   min-height: auto;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .default-button {
@@ -512,7 +494,7 @@ a {
 
 .swiper-slide.thumbnail-item {
   cursor: pointer;
-  border: 4px solid rgba(0, 0, 0, 0);
+  border: 4px solid #0000;
   border-radius: 0%;
   justify-content: center;
   align-items: center;
@@ -523,7 +505,7 @@ a {
   position: relative;
   overflow: hidden;
   transform: scale(.95);
-  box-shadow: 0 0 0 5.5px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 5.5px #0000;
 }
 
 .margin-bottom, .margin-bottom.margin-small {
@@ -635,7 +617,6 @@ a {
   padding-left: 0;
   padding-right: 0;
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   top: 90px;
   bottom: 220px;
@@ -710,13 +691,10 @@ a {
 
 .slider-button-right.absolute-right {
   color: #2b00ff;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #fff0;
   display: none;
   position: absolute;
-  top: 210px;
-  bottom: auto;
-  left: auto;
-  right: -100px;
+  inset: 210px -100px auto auto;
 }
 
 .icon-embed-small {
@@ -776,13 +754,10 @@ a {
 .slider-button-left.absolute-left {
   color: #2b00ff;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #fff0;
   display: none;
   position: absolute;
-  top: 210px;
-  bottom: auto;
-  left: -100px;
-  right: auto;
+  inset: 210px auto auto -100px;
 }
 
 .lystra-buttonwrap {
@@ -1206,7 +1181,7 @@ a {
 .button-outline-2 {
   color: var(--white);
   cursor: pointer;
-  background-color: rgba(0, 0, 0, .03);
+  background-color: #00000008;
   border: 1px solid #fff;
   padding-left: 30px;
   padding-right: 30px;
@@ -1412,10 +1387,7 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .leftfaq {
@@ -1428,10 +1400,7 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .backgroundbig {
@@ -1442,10 +1411,7 @@ a {
   max-height: none;
   margin-bottom: 124px;
   position: relative;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .image-8 {
@@ -1872,7 +1838,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   top: 0%;
 }
@@ -2217,10 +2182,7 @@ a {
   font-size: 1rem;
   display: flex;
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
 }
 
 .footergrid {
@@ -2286,13 +2248,16 @@ a {
 }
 
 .submit-button {
-  background-color: var(--black);
+  border: 2px solid var(--lystra-blue);
+  background-color: var(--white);
+  color: var(--lystra-blue);
   width: 100%;
   height: 60px;
 }
 
 .submit-button:hover {
   background-color: var(--lystra-blue);
+  color: var(--white);
 }
 
 .navformblock {
@@ -2310,7 +2275,7 @@ a {
 }
 
 .checkbox {
-  background-color: rgba(56, 152, 236, .13);
+  background-color: #3898ec21;
   min-width: 20px;
   min-height: 20px;
 }
@@ -2318,7 +2283,7 @@ a {
 .checkbox.w--redirected-checked {
   border-style: solid;
   border-color: var(--lystra-blue);
-  background-color: rgba(56, 152, 236, 0);
+  background-color: #3898ec00;
   background-image: url('../images/bluecheck.svg');
   background-position: 0 0;
   background-repeat: repeat;
@@ -2402,12 +2367,20 @@ a {
   height: 80px;
 }
 
+.footerbaselinks {
+  display: flex;
+}
+
 .footerbaselinks:hover {
   color: var(--lystra-peach);
 }
 
 .footerbaselinks:visited {
   color: var(--white);
+}
+
+.footerbaselinks.dark {
+  color: var(--lystra-blue);
 }
 
 .home-video {
@@ -2465,6 +2438,16 @@ a {
 
 .aboutright {
   position: relative;
+}
+
+.checkboxform {
+  width: 100%;
+  margin-top: 21px;
+  display: flex;
+}
+
+.privacyicon {
+  margin-left: 6px;
 }
 
 @media screen and (max-width: 991px) {
@@ -2548,10 +2531,7 @@ a {
 
   .homesection2-text {
     min-height: auto;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
   }
 
   .section2-imagewrap {
@@ -2727,10 +2707,7 @@ a {
   }
 
   .imageabsoute {
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
   }
 
   .leftfaq {
@@ -3187,10 +3164,7 @@ a {
     height: 400px;
     margin-bottom: -13px;
     position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
     overflow: hidden;
   }
 
@@ -3293,10 +3267,7 @@ a {
     height: auto;
     margin-bottom: -13px;
     position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
     overflow: hidden;
   }
 
@@ -3581,10 +3552,7 @@ a {
     height: auto;
     margin-bottom: 0;
     position: relative;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
   }
 
   .abouttall {
@@ -3663,10 +3631,7 @@ a {
     height: auto;
     margin-bottom: 0;
     position: relative;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
   }
 
   .navgrid1wrap {
@@ -3724,8 +3689,7 @@ a {
 }
 
 #w-node-fcb1eed8-ff06-05f0-a8d5-57e20137766a-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_2a0708b4-3dfe-4748-4c69-0118fd172655-d820a03d {
@@ -3733,74 +3697,60 @@ a {
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe19-d820a03d {
-  align-self: center;
-  justify-self: end;
+  place-self: center end;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe43-d820a03d {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe45-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe49-d820a03d {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe4b-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe4f-d820a03d {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe51-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe55-d820a03d {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe57-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe5b-d820a03d {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_49117110-3955-3bb6-2d9a-111a9a4dfe5d-d820a03d {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_875c5cee-55fe-6667-1aeb-ecc27f959e5b-f16b93e6, #w-node-dbb30e03-9ed2-4727-0421-aaa3f5e43410-f16b93e6, #w-node-_7f94a512-2aa4-32d1-7a89-46912b26c729-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dee-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4dfa-f16b93e6, #w-node-_01f68ddc-e09e-1aa8-4496-1b13e03f4e08-f16b93e6 {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d72-7db9ad0a {
-  align-self: start;
-  justify-self: center;
+  place-self: start center;
 }
 
 #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d79-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d80-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d87-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d8f-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d97-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372d9f-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372da6-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372db1-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dbb-7db9ad0a, #w-node-d2d04819-a34d-858e-684d-b887ec25ae55-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dd2-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372dd9-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372de4-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372de7-7db9ad0a, #w-node-bf7d8140-cca9-e7ff-db3a-a82106372deb-7db9ad0a {
   grid-area: span 1 / span 1 / span 1 / span 1;
-  align-self: start;
-  justify-self: center;
+  place-self: start center;
 }
 
 #w-node-_395f8a96-8bb4-72cc-0365-cb1f65daf2c9-8f957fc5 {
@@ -3808,8 +3758,7 @@ a {
 }
 
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd2492f-cf587b2f {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd24937-cf587b2f {
@@ -3817,13 +3766,11 @@ a {
 }
 
 #w-node-_4cf529a0-1039-9a62-bf4b-565ccfd2493c-cf587b2f {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b2d-cf587b2f, #w-node-fcd38f7f-cfb6-5cba-f0e7-56d7864df4b8-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b44-cf587b2f, #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b52-cf587b2f {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-_3f0b6121-b6a0-987c-d244-cd41172b0830-cf587b2f {
@@ -3843,13 +3790,11 @@ a {
 }
 
 #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d299f9-d7c8ecc4, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a05-d7c8ecc4, #w-node-_8227fbf9-aae8-41d5-0d39-adb3e5d29a13-d7c8ecc4 {
-  align-self: center;
-  justify-self: center;
+  place-self: center;
 }
 
 #w-node-a93971af-e027-a18c-e606-e8a6928def3c-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def45-c2dee5db, #w-node-a93971af-e027-a18c-e606-e8a6928def4f-c2dee5db {
-  align-self: start;
-  justify-self: center;
+  place-self: start center;
 }
 
 #w-node-_3433ded7-ad65-13f9-7b3b-9190e3905c96-c2dee5db, #w-node-_210af617-cd8b-a328-015d-ee37146e4260-c2dee5db, #w-node-c847dcb8-a536-d030-bc4c-5d92617ff689-c2dee5db {
@@ -3857,8 +3802,7 @@ a {
 }
 
 #w-node-_9e6d7e53-fc50-922e-59e9-d8670c6ab4d4-6e829d6e {
-  align-self: center;
-  justify-self: start;
+  place-self: center start;
 }
 
 @media screen and (max-width: 991px) {
@@ -3867,8 +3811,7 @@ a {
   }
 
   #w-node-ccda12b7-b194-d6a8-4137-aa55efb7925c-cf587b2f, #w-node-d08a9682-468c-c577-f927-7306f0e44972-cf587b2f {
-    align-self: center;
-    justify-self: center;
+    place-self: center;
   }
 
   #w-node-ae43a264-5fb7-6bf9-8b94-ebdb5997ff2c-cf587b2f {
@@ -3876,8 +3819,7 @@ a {
   }
 
   #w-node-ae43a264-5fb7-6bf9-8b94-ebdb5997ff2e-cf587b2f {
-    align-self: center;
-    justify-self: center;
+    place-self: center;
   }
 }
 
@@ -3901,44 +3843,43 @@ a {
 
 @media screen and (max-width: 479px) {
   #w-node-b6970e62-e4ae-8b92-8118-7dbab91c2b50-cf587b2f {
-    align-self: center;
-    justify-self: center;
+    place-self: center;
   }
 }
 
 
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-light.otf") format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-bold.otf") format('opentype');
+  src: url('../fonts/braunlinear-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-thin.otf") format('opentype');
-  font-weight: 100;
+  src: url('../fonts/braunlinear-light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-medium.otf") format('opentype');
+  src: url('../fonts/braunlinear-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Braunlinear';
-  src: url("https://lystrastyle.netlify.app/assets/fonts/braunlinear-regular.otf") format('opentype');
+  src: url('../fonts/braunlinear-regular.otf') format('opentype');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Braunlinear';
+  src: url('../fonts/braunlinear-thin.otf') format('opentype');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
